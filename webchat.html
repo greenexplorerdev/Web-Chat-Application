@@ -1,0 +1,1167 @@
+<!doctype html>
+<html lang="it" class="h-full w-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <title>Document</title>
+  </head>
+  <body class="h-full w-full bg-zinc-900 text-gray-300 overflow-hidden">
+    <main class="flex h-full w-full bg-sky-800 ">
+      <!-- l'aside avrà la sezione del profilo e dei contatti -->
+      <aside class="flex h-full w-fit">
+        <nav
+          id="navbar"
+          class="fixed bottom-0 left-0 right-0 h-16 z-40 sm:relative sm:w-20 sm:h-full sm:z-auto bg-sky-950 flex flex-row sm:flex-col items-center justify-around sm:justify-start border-t sm:border-t-0 border-gray-600"
+        >
+          <div
+            class="flex flex-col justify-center items-center border-b border-b-gray-600 py-2"
+          >
+            <div
+              class="rounded-full size-9 sm:size-10 md:size-11 border border-amber-500 flex items-center justify-center cursor-pointer"
+            >
+              <img
+                src="./img/ragazza-in-posa-di-lato.webp"
+                class="rounded-full size-8 sm:size-9 md:size-10"
+                alt="ragazza in posa di lato.webp"
+              />
+              <figcaption class="hidden">
+                Image by Khusen Rustamov from Pixabay
+              </figcaption>
+            </div>
+          </div>
+          <div class="py-5 border-b border-b-gray-600">
+            <ul
+              class="gap-3 flex flex-row sm:flex-col items-center justify-around sm:justify-start"
+            >
+              <li
+                class="group hover:bg-gray-700 rounded-lg p-2 flex justify-center cursor-pointer"
+                onclick="mostraelencochat()"
+              >
+                <link href="/src/output.css" rel="stylesheet" />
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-gray-300 group-hover:text-blue-700"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+                  />
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                  />
+                </svg>
+              </li>
+              <li
+                class="group hover:bg-gray-700 rounded-lg p-2 flex justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-gray-300 group-hover:text-blue-700"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m6.115 5.19.319 1.913A6 6 0 0 0 8.11 10.36L9.75 12l-.387.775c-.217.433-.132.956.21 1.298l1.348 1.348c.21.21.329.497.329.795v1.089c0 .426.24.815.622 1.006l.153.076c.433.217.956.132 1.298-.21l.723-.723a8.7 8.7 0 0 0 2.288-4.042 1.087 1.087 0 0 0-.358-1.099l-1.33-1.108c-.251-.21-.582-.299-.905-.245l-1.17.195a1.125 1.125 0 0 1-.98-.314l-.295-.295a1.125 1.125 0 0 1 0-1.591l.13-.132a1.125 1.125 0 0 1 1.3-.21l.603.302a.809.809 0 0 0 1.086-1.086L14.25 7.5l1.256-.837a4.5 4.5 0 0 0 1.528-1.732l.146-.292M6.115 5.19A9 9 0 1 0 17.18 4.64M6.115 5.19A8.965 8.965 0 0 1 12 3c1.929 0 3.716.607 5.18 1.64"
+                  />
+                </svg>
+              </li>
+              <li
+                class="group hover:bg-gray-700 rounded-lg p-2 flex justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-gray-300 group-hover:text-blue-700"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+                  />
+                </svg>
+              </li>
+              <li
+                class="group hover:bg-gray-700 rounded-lg p-2 flex justify-center"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5 text-gray-300 group-hover:text-blue-700"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0 0 12 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 0 1-2.031.352 5.988 5.988 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971Zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0 2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 0 1-2.031.352 5.989 5.989 0 0 1-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971Z"
+                  />
+                </svg>
+              </li>
+            </ul>
+          </div>
+          <!-- sezione delle persone Online  -->
+          <div
+            class="hidden sm:block py-5 border-b border-b-gray-600 flex-row sm:flex-col items-center justify-around sm:justify-start gap-5"
+          >
+            <div class="uppercase text-xs text-gray-400 text-center mb-2">
+              Online
+            </div>
+            <ul
+              class="flex flex-row flex-wrap sm:flex-col items-center justify-around sm:justify-start gap-7"
+            >
+              <li class="flex justify-center relative cursor-pointer">
+                <div class="rounded-full size-9" onclick="chatSingola(`laura`)">
+                  <img
+                    src="./img/donna-neon.webp"
+                    class="rounded-full size-9"
+                    alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+                  />
+                  <figcaption class="hidden">
+                    Photo by Aiony Haust on Unsplash
+                  </figcaption>
+                </div>
+                <div
+                  class="rounded-full bg-green-400 size-2 absolute right-0 bottom-0"
+                ></div>
+              </li>
+              <li class="flex justify-center">
+                <div class="rounded-full size-9">
+                  <img
+                    src="./img/ragazzo-con-cappello.webp"
+                    class="rounded-full size-9"
+                    alt="ragazzo in posa con cappello.webp"
+                  />
+                  <figcaption class="hidden">
+                    Image by u_ije1ll8nnz from Pixabay
+                  </figcaption>
+                </div>
+              </li>
+              <li class="flex justify-center">
+                <div class="rounded-full size-9">
+                  <img
+                    src="./img/donna-che-sorride.webp"
+                    class="rounded-full size-9"
+                    alt="ragazza dai capelli rossi che sorride.webp"
+                  />
+                  <figcaption class="hidden">
+                    Image by Christopher Ross from Pixabay
+                  </figcaption>
+                </div>
+              </li>
+              <li class="flex justify-center relative">
+                <div class="rounded-full size-9">
+                  <img
+                    src="./img/ragazzo-di-colore-che-sorride.webp"
+                    class="rounded-full size-9"
+                    alt="ragazzo di colore che sorride.webp"
+                  />
+                  <figcaption class="hidden">
+                    Image by Luke Savadogo from Pixabay
+                  </figcaption>
+                </div>
+                <div
+                  class="rounded-full bg-green-400 size-2 absolute right-0 bottom-0"
+                ></div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- sezione dei contatti, seconda colonna -->
+        <section
+          id="elencochat"
+          class="hidden fixed inset-0 z-50 sm:relative sm:z-auto w-full sm:w-60 h-full bg-sky-900"
+        >
+          <!-- stories -->
+          <div
+            class="gap-3 flex justify-center *:rounded-full *:size-7 *:sm:size-9 *:border *:border-green-500 pb-4 border-b border-b-gray-600 relative"
+          >
+            <div
+              class="flex justify-center items-center cursor-pointer"
+              onclick="creastories()"
+            >
+              <img
+                src="./img/ragazza-in-posa-di-lato.webp"
+                class="rounded-full size-6 sm:size-9"
+                alt="ragazza in posa di lato.webp"
+              />
+              <figcaption class="hidden">
+                Image by Khusen Rustamov from Pixabay
+              </figcaption>
+            </div>
+            <div
+              class="flex justify-center items-center cursor-pointer"
+              onclick="creastories()"
+            >
+              <img
+                src="./img/donna-neon.webp"
+                class="rounded-full size-6 sm:size-9"
+                alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+              />
+              <figcaption class="hidden">
+                Photo by Aiony Haust on Unsplash
+              </figcaption>
+            </div>
+            <div
+              class="flex justify-center items-center cursor-pointer"
+              onclick="creastories()"
+            >
+              <img
+                src="./img/ragazzo-con-cappello.webp"
+                class="rounded-full size-6 sm:size-9"
+                alt="ragazzo in posa con cappello.webp"
+              />
+              <figcaption class="hidden">
+                Image by u_ije1ll8nnz from Pixabay
+              </figcaption>
+            </div>
+            <div
+              class="flex justify-center items-center cursor-pointer"
+              onclick="creastories()"
+            >
+              <img
+                src="./img/donna-che-sorride.webp"
+                class="rounded-full size-6 sm:size-9"
+                alt="ragazza dai capelli rossi che sorride.webp"
+              />
+              <figcaption class="hidden">
+                Image by Christopher Ross from Pixabay
+              </figcaption>
+            </div>
+            <div
+              class="flex justify-center items-center cursor-pointer relative"
+              onclick="creastories()"
+            >
+              <img
+                src="./img/ragazzo-di-colore-che-sorride.webp"
+                class="rounded-full size-6 sm:size-9"
+                alt="ragazzo di colore che sorride.webp"
+              />
+              <figcaption class="hidden">
+                Image by Luke Savadogo from Pixabay
+              </figcaption>
+            </div>
+          </div>
+          <div id="stories" class="text-red-500 font-bold text-xs hidden">
+            <p class="text-center">le Storie sono in arrivo!</p>
+          </div>
+
+          <div
+            class="flex justify-between py-3 pb-4 border-b border-b-gray-600"
+          >
+            <div class="text-xs font-semibold">
+              Message <span class="text-sky-500 text-[0.55rem]">3 New</span>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z"
+              />
+            </svg>
+          </div>
+          <!-- sezione pinned chat con primo messaggio di laura laurense -->
+          <div class="relative pb-4 border-b border-b-gray-600">
+            <input
+              type="search"
+              class="bg-gray-800 rounded-xl placeholder:text-gray-600 p-1 border-none h-8 text-xs mt-3 relative w-full"
+              placeholder="search here... (non ancora disponibile)"
+            />
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 absolute right-4 top-5 text-gray-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+              />
+            </svg>
+          </div>
+          <div class="flex items-center my-2 gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4 text-sky-600"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+              />
+            </svg>
+
+            <span class="text-[0.60rem] text-sky-600 uppercase"
+              >Pinned chat</span
+            >
+          </div>
+          <div
+            class="flex p-2 gap-2 py-2 rounded-lg hover:bg-gray-800 hover:cursor-pointer"
+            onclick="chatSingola(`laura`)"
+          >
+            <!-- approccio orizzontale-verticale-orizzontale -->
+            <!-- div orizzontale -->
+            <div class="flex justify-center relative p-1">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/donna-neon.webp"
+                  class="rounded-full size-9"
+                  alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+                />
+                <figcaption class="hidden">
+                  Photo by Aiony Haust on Unsplash
+                </figcaption>
+              </div>
+              <div
+                class="rounded-full bg-green-400 size-2 absolute right-1 bottom-1"
+              ></div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full">
+              <!-- div orizzontale -->
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold">Laura Laurense</span>
+                <span class="text-[0.55rem]"> 12m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[0.55rem]">ceo of dreamland</span>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="size-3 text-green-500 text-xs"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- sezione group chat -->
+
+          <div class="flex items-center my-2 gap-1">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-4 text-sky-600"
+            >
+              <path
+                d="M10 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM1.49 15.326a.78.78 0 0 1-.358-.442 3 3 0 0 1 4.308-3.516 6.484 6.484 0 0 0-1.905 3.959c-.023.222-.014.442.025.654a4.97 4.97 0 0 1-2.07-.655ZM16.44 15.98a4.97 4.97 0 0 0 2.07-.654.78.78 0 0 0 .357-.442 3 3 0 0 0-4.308-3.517 6.484 6.484 0 0 1 1.907 3.96 2.32 2.32 0 0 1-.026.654ZM18 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0ZM5.304 16.19a.844.844 0 0 1-.277-.71 5 5 0 0 1 9.947 0 .843.843 0 0 1-.277.71A6.975 6.975 0 0 1 10 18a6.974 6.974 0 0 1-4.696-1.81Z"
+              />
+            </svg>
+
+            <span class="text-[0.60rem] text-sky-600 uppercase"
+              >Groups Chat</span
+            >
+          </div>
+          <div
+            class="flex p-2 gap-2 py-2 rounded-lg hover:bg-gray-800 hover:cursor-pointer"
+            onclick="chatSingola(`group`)"
+          >
+            <!-- approccio orizzontale-verticale-orizzontale -->
+            <!-- div orizzontale -->
+            <div class="flex justify-center relative">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/vista-montagne-e-lago-trekking.webp"
+                  class="rounded-full size-9"
+                  alt="vista-montagne-e-lago-trekking.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Felix from Pixabay
+                </figcaption>
+              </div>
+              <div
+                class="rounded-full bg-green-400 size-2 absolute right-0 bottom-0"
+              ></div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full">
+              <!-- div orizzontale -->
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold">Trek's Group</span>
+                <span class="text-[0.55rem]"> 12m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[0.55rem]">uscite Trekking</span>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    class="size-3 text-green-500 text-xs"
+                    stroke-width="2"
+                    stroke="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- sezione all messages -->
+          <div class="flex items-center my-2 gap-1">
+            <span class="text-[0.60rem] text-sky-600 uppercase"
+              >All Messages</span
+            >
+          </div>
+          <div
+            class="flex p-2 gap-2 py-4s rounded-lg hover:bg-gray-800 border-b border-b-gray-600 mb-4"
+          >
+            <!-- approccio orizzontale-verticale-orizzontale -->
+            <!-- div orizzontale -->
+            <div class="flex justify-center">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/ragazzo-con-cappello.webp"
+                  class="rounded-full size-9"
+                  alt="ragazzo in posa con cappello.webp"
+                />
+                <figcaption class="hidden">
+                  Image by u_ije1ll8nnz from Pixabay
+                </figcaption>
+              </div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full">
+              <!-- div orizzontale -->
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold">Roberto Rossi</span>
+                <span class="text-[0.55rem]"> 12m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[0.55rem]">Chiamata persa</span>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-3 text-red-500 text-xs"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M19.5 9.75a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 1 1.5 0v2.69l4.72-4.72a.75.75 0 1 1 1.06 1.06L16.06 9h2.69a.75.75 0 0 1 .75.75Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex p-2 gap-2 py-4s rounded-lg hover:bg-gray-800 border-b border-b-gray-600 mb-4"
+          >
+            <!-- approccio orizzontale-verticale-orizzontale -->
+            <!-- div orizzontale -->
+            <div class="rounded-full size-9">
+              <img
+                src="./img/donna-che-sorride.webp"
+                class="rounded-full size-9"
+                alt="ragazza dai capelli rossi che sorride.webp"
+              />
+              <figcaption class="hidden">
+                Image by Christopher Ross from Pixabay
+              </figcaption>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full">
+              <!-- div orizzontale -->
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold">Federica Frassi</span>
+                <span class="text-[0.55rem]"> 15m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[0.55rem]">Chiamata effettuata</span>
+                <span
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="size-3 text-green-500 text-xs"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M15 3.75a.75.75 0 0 1 .75-.75h4.5a.75.75 0 0 1 .75.75v4.5a.75.75 0 0 1-1.5 0V5.56l-4.72 4.72a.75.75 0 1 1-1.06-1.06l4.72-4.72h-2.69a.75.75 0 0 1-.75-.75Z"
+                      clip-rule="evenodd"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="flex p-2 gap-2 py-4s rounded-lg hover:bg-gray-800 border-b border-b-gray-600"
+          >
+            <!-- approccio orizzontale-verticale-orizzontale -->
+            <!-- div orizzontale -->
+            <div class="flex justify-center relative">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/ragazzo-di-colore-che-sorride.webp"
+                  class="rounded-full size-9"
+                  alt="ragazzo di colore che sorride.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Luke Savadogo from Pixabay
+                </figcaption>
+              </div>
+              <div
+                class="rounded-full bg-green-400 size-2 absolute right-0 bottom-0"
+              ></div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full">
+              <!-- div orizzontale -->
+              <div class="flex justify-between items-center">
+                <span class="text-xs font-bold">Mario Maroni</span>
+                <span class="text-[0.55rem]"> 2m</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-[0.55rem]"
+                  >Lorem ipsum dolor sit amet...</span
+                >
+                <!-- TODO: Potrei far scomparire il numerino una volta che clicco sulla chat -->
+                <span
+                  class="rounded-full size-4 bg-purple-600 font-bold text-[0.70rem] flex items-center justify-center"
+                >
+                  3
+                </span>
+              </div>
+            </div>
+          </div>
+          <button
+            class="sm:hidden group rounded-full absolute bottom-0 right-0 p-2 hover:bg-sky-700 bg-sky-500"
+            onclick="mostraNavBar()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-5 text-gray-300 group-hover:text-blue-700"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"
+              />
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+              />
+            </svg>
+          </button>
+        </section>
+      </aside>
+      <!-- questa è la sezione della chat espansa -->
+      <section
+        id="chat-group"
+        class="bg-sky-950 h-full w-full relative overflow-auto border-l-2 border-l-sky-800 hidden"
+      >
+        <!-- parte del menu sopra -->
+        <nav
+          class="flex justify-between items-center bg-gray-700/50 px-5 py-3 sticky top-0 left-0 right-0"
+        >
+          <div
+            class="flex gap-2 py-2 rounded-lg hover:bg-gray-800 hover:cursor-pointer p-2"
+          >
+            <div class="flex justify-center">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/vista-montagne-e-lago-trekking.webp"
+                  class="rounded-full size-9"
+                  alt="vista-montagne-e-lago-trekking.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Felix from Pixabay
+                </figcaption>
+              </div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full gap-2">
+              <!-- div orizzontale -->
+
+              <span class="text-xs font-bold">Trek's Group</span>
+              <span class="text-[0.55rem]">22 members - 12 online</span>
+            </div>
+          </div>
+          <div onclick="chatSingola(`group`)" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </nav>
+        <!-- parte della chat centrale con i messaggi delle conversazioni -->
+        <!-- chat di gruppo -->
+
+        <section class="flex h-full flex-col-reverse p-3 overflow-auto">
+          <!-- messaggio -->
+          <div class="flex flex-col items-end">
+            <div class="flex flex-row-reverse gap-2">
+              <div class="rounded-full size-8">
+                <img
+                  src="./img/ragazza-in-posa-di-lato.webp"
+                  class="rounded-full size-8"
+                  alt="ragazza in posa di lato.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Khusen Rustamov from Pixabay
+                </figcaption>
+              </div>
+              <div class="flex flex-col items-end w-52">
+                <div
+                  class="flex flex-row-reverse gap-2 justify-between mb-2 items-center w-full"
+                >
+                  <span class="text-[0.75rem] text-white">You </span>
+                  <span class="text-[0.75rem]">10:45 am </span>
+                </div>
+                <div
+                  class="bg-sky-500 rounded-xl rounded-tr-none text-white text-sm text-wrap w-52 p-3"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur, odio.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 mb-2">
+            <div class="rounded-full size-8">
+              <img
+                src="./img/donna-neon.webp"
+                class="rounded-full size-8"
+                alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+              />
+              <figcaption class="hidden">
+                Photo by Aiony Haust on Unsplash
+              </figcaption>
+            </div>
+            <div class="flex flex-col items-start w-52">
+              <div class="flex gap-2 justify-between mb-2 items-center w-full">
+                <span class="text-[0.75rem] text-white">Laura Laurense </span>
+                <span class="text-[0.75rem]">10:03 am </span>
+              </div>
+              <div
+                class="bg-sky-500 rounded-xl rounded-tl-none text-white text-sm text-wrap p-3"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, odio.
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col items-end">
+            <div class="flex flex-row-reverse gap-2">
+              <div class="rounded-full size-8">
+                <img
+                  src="./img/ragazza-in-posa-di-lato.webp"
+                  class="rounded-full size-8"
+                  alt="ragazza in posa di lato.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Khusen Rustamov from Pixabay
+                </figcaption>
+              </div>
+              <div class="flex flex-col items-end w-52">
+                <div
+                  class="flex flex-row-reverse gap-2 justify-between mb-2 items-center w-full"
+                >
+                  <span class="text-[0.75rem] text-white">You </span>
+                  <span class="text-[0.75rem]">09:45 am </span>
+                </div>
+                <div
+                  class="bg-sky-500 rounded-xl rounded-tr-none text-white text-sm text-wrap w-52 p-3"
+                >
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consequatur, odio.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 mb-2">
+            <div class="rounded-full size-9">
+              <img
+                src="./img/ragazzo-con-cappello.webp"
+                class="rounded-full size-9"
+                alt="ragazzo in posa con cappello.webp"
+              />
+              <figcaption class="hidden">
+                Image by u_ije1ll8nnz from Pixabay
+              </figcaption>
+            </div>
+            <div class="flex flex-col items-start w-52">
+              <div class="flex gap-2 justify-between mb-2 items-center w-full">
+                <span class="text-[0.75rem] text-white">Roberto Rossi</span>
+                <span class="text-[0.75rem]">09:00 am </span>
+              </div>
+              <div
+                class="bg-sky-500 rounded-xl rounded-tl-none text-white text-sm text-wrap p-3"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, odio.
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 mb-2">
+            <div class="rounded-full size-8">
+              <img
+                src="./img/ragazzo-di-colore-che-sorride.webp"
+                class="rounded-full size-9"
+                alt="ragazzo di colore che sorride.webp"
+              />
+              <figcaption class="hidden">
+                Image by Luke Savadogo from Pixabay
+              </figcaption>
+            </div>
+            <div class="flex flex-col items-start w-52">
+              <div class="flex gap-2 justify-between mb-2 items-center w-full">
+                <span class="text-[0.75rem] text-white">Mario Maroni</span>
+                <span class="text-[0.75rem]">08:48 am </span>
+              </div>
+              <div
+                class="bg-sky-500 rounded-xl rounded-tl-none text-white text-sm text-wrap p-3"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, odio.
+              </div>
+            </div>
+          </div>
+          <div class="flex gap-2 mb-2">
+            <div class="rounded-full size-8">
+              <img
+                src="./img/donna-neon.webp"
+                class="rounded-full size-9"
+                alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+              />
+              <figcaption class="hidden">
+                Photo by Michael Dam on Unsplash
+              </figcaption>
+            </div>
+            <div class="flex flex-col items-start w-52">
+              <div class="flex gap-2 justify-between mb-2 items-center w-full">
+                <span class="text-[0.75rem] text-white">Laura Laurense </span>
+                <span class="text-[0.75rem]">08:37 am </span>
+              </div>
+              <div
+                class="bg-sky-500 rounded-xl rounded-tl-none text-white text-sm text-wrap p-3"
+              >
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Consequatur, odio.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- parte finale -->
+      </section>
+
+      <!-- sezione di laura laurense pinnata quindi non scompare mai -->
+      <section
+        id="chat-laura"
+        class="bg-sky-950 h-full w-full relative overflow-auto border-l-2 border-l-sky-800 flex flex-col"
+      >
+        <!-- parte del menu sopra -->
+        <nav
+          class="flex justify-between items-center bg-sky-700/50 px-5 py-3 sticky top-0 left-0 right-0"
+        >
+          <div
+            class="flex gap-2 py-2 rounded-lg hover:bg-gray-800 hover:cursor-pointer p-2"
+          >
+            <div class="flex justify-center relative">
+              <div class="rounded-full size-9">
+                <img
+                  src="./img/donna-neon.webp"
+                  class="rounded-full size-9"
+                  alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Ribhav Agrawal from Pixabay
+                </figcaption>
+                <div
+                  class="rounded-full bg-green-400 size-2 absolute right-0 bottom-0"
+                ></div>
+              </div>
+            </div>
+            <!-- div verticale -->
+            <div class="flex flex-col w-full gap-2">
+              <!-- div orizzontale -->
+              <span class="text-xs font-bold">Laura Laurense</span>
+              <span class="text-[0.65rem]">Ceo of Dreamland</span>
+            </div>
+          </div>
+          <div onclick="chatSingola(`laura`)" class="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-4"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+        </nav>
+        <!--sezione chat vera e propria con laura -->
+        <div
+          id="messages"
+          class="overflow-y-auto mb-2.5 p-2.5 flex flex-col-reverse"
+        ></div>
+        <div
+          class="relative pb-4 px-10 border-b border-b-gray-600 flex flex-row items-center justify-center"
+        >
+          <input
+            id="messageInput"
+            type="text"
+            class="bg-gray-800 rounded-xl placeholder:text-gray-600 placeholder:text-center border-none h-8 text-xs mt-3 relative w-full p-2"
+            placeholder=" scrivi un messaggio..."
+          />
+          <button
+            class="bg-indigo-800 rounded-xl border-none h-8 mt-4 p-2 text-sm flex items-center cursor-pointer"
+            onclick="sendMessage()"
+          >
+            invia
+          </button>
+        </div>
+      </section>
+      <!-- parte del team di sviluppo -->
+      <section class="hidden">
+        <div class="bg-white py-24 sm:py-32">
+          <div
+            class="mx-auto grid max-w-7xl gap-20 px-6 lg:px-8 xl:grid-cols-3"
+          >
+            <div class="max-w-xl">
+              <h2
+                class="text-3xl font-semibold tracking-tight text-pretty text-gray-900 sm:text-4xl"
+              >
+                Meet our leadership
+              </h2>
+              <p class="mt-6 text-lg/8 text-gray-600">
+                We’re a dynamic group of individuals who are passionate about
+                what we do and dedicated to delivering the best results for our
+                clients.
+              </p>
+            </div>
+            <ul
+              role="list"
+              class="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2"
+            >
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Leslie Alexander
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Co-Founder / CEO
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Michael Foster
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Co-Founder / CTO
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Dries Vincent
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Business Relations
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Lindsay Walton
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Front-end Developer
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Courtney Henry
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Designer
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="flex items-center gap-x-6">
+                  <img
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+                    alt=""
+                    class="size-16 rounded-full outline-1 -outline-offset-1 outline-black/5"
+                  />
+                  <div>
+                    <h3
+                      class="text-base/7 font-semibold tracking-tight text-gray-900"
+                    >
+                      Tom Cook
+                    </h3>
+                    <p class="text-sm/6 font-semibold text-indigo-600">
+                      Director of Product
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      function creastories() {
+        console.log("sono nella funzione");
+        const stories = document.getElementById("stories");
+        stories.classList.remove("hidden");
+        setTimeout(() => {
+          stories.classList.add("hidden");
+        }, 4000);
+      }
+
+      function mostraelencochat() {
+        console.log("sono nella funzione dell'elenco chat");
+        const chatdigruppo = document.getElementById("elencochat");
+        try {
+          if (chatdigruppo.classList.contains("hidden")) {
+            chatdigruppo.classList.remove("hidden");
+          } else {
+            chatdigruppo.classList.add("hidden");
+          }
+          mostraNavBar();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+      function mostraNavBar() {
+        console.log("sono nella funzione della navbar");
+        const navBar = document.getElementById("navbar");
+        const elencoChat = document.getElementById("elencochat")
+        try {
+          if (navBar.classList.contains("hidden")) {
+            console.log("mostro la navbar")
+            navBar.classList.remove("hidden");
+            elencoChat.classList.add("hidden");
+          } else {
+            console.log("nascondo la navbar")
+            navBar.classList.add("hidden");
+             elencoChat.classList.remove("hidden");
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      function chatSingola(chat) {
+        console.log("sono nella funzione di rimozione della chat singola");
+        const chatdisingola = document.getElementById(`chat-${chat}`);
+        try {
+          console.log("dentro chat singola");
+          if (chatdisingola.classList.contains("hidden")) {
+            chatdisingola.classList.remove("hidden");
+            console.log(` chat di ${chat} `);
+          } else {
+            chatdisingola.classList.add("hidden");
+          }
+          mostraelencochat();
+        } catch (error) {
+          console.error(error);
+        }
+      }
+
+      const messages = document.getElementById("messages");
+      const messageInput = document.getElementById("messageInput");
+
+      messageInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          sendMessage();
+        }
+      });
+
+      function sendMessage() {
+        const message = messageInput.value;
+        if (message.trim() !== "") {
+          const messageElement = document.createElement("div");
+          messageElement.innerHTML = `<div class="flex mb-2 gap-2 flex-row-reverse">
+              <div class="rounded-full size-8">
+                <img
+                  src="./img/ragazza-in-posa-di-lato.webp"
+                  class="rounded-full size-8"
+                  alt="ragazza in posa di lato.webp"
+                />
+                <figcaption class="hidden">
+                  Image by Khusen Rustamov from Pixabay
+                </figcaption>
+              </div>
+              <div class="flex flex-col items-end max-w-[75%]">
+                <div
+                  class="flex flex-row-reverse gap-2 justify-between mb-2 items-center w-full"
+                >
+                  <span class="text-[0.75rem] text-white"> You </span>
+                </div>
+                <div class="bg-sky-500 rounded-xl rounded-tr-none text-white text-sm p-3 wrap-anywhere text-end">
+                ${message}
+                </div>
+              </div>
+            </div>`;
+          messages.appendChild(messageElement);
+          messageInput.value = "";
+          rispostaMessaggio();
+        }
+      }
+      function rispostaMessaggio() {
+        const rispostaElement = document.createElement("div");
+        rispostaElement.innerHTML = `<div class="flex gap-2 mb-2">
+            <div class="rounded-full size-8">
+              <img
+                src="./img/donna-neon.webp"
+                class="rounded-full size-8"
+                alt="ragazza sorridente in ambiente di luce al neon e cuffie.webp"
+              />
+              <figcaption class="hidden">
+                Photo by Aiony Haust on Unsplash
+              </figcaption>
+            </div>
+           <div class="flex flex-col items-start max-w-[75%]">
+              <div class="flex gap-2 justify-between mb-2 items-center w-full">
+                <span class="text-[0.75rem] text-white">Laura Laurense </span>
+              </div>
+              <div
+               <div class="bg-sky-500 rounded-xl rounded-tl-none text-white text-sm p-3">
+                Questa è una risposta automatica, al momento sono in riunione e non posso rispondere. Grazie della comprensione 🤪
+            </div>
+          </div>`;
+        messages.appendChild(rispostaElement);
+      }
+    </script>
+  </body>
+</html>
