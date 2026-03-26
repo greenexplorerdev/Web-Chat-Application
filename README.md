@@ -24,6 +24,14 @@
 - **Stories**: UI dedicata con simulazione di stato "in arrivo".
 - **Ricerca**: Input di ricerca presente nell'UI (pronto per futura implementazione logica).
 
+### Obiettivo: 
+**Creare una Web-Chat Realistica con Tailwind4**
+- Eliminazione del ricaricamento della pagina (SPA Architecture)
+- Consolidamento della UX attraverso l’approccio “Mobile First”
+- Simulazione di interattività realistica (Chat 1 a 1) senza Backend
+
+
+
 ### 🛫 Disponibile in Locale
 - Il progetto non richiede build tools o installazioni complesse.
 - Clona il repo: ` git clone https://github.com/greenexplorerdev/Web-Chat-Application.git `
